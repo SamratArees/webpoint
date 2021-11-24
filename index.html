@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <script src="calculator.js"></script>
+
+</head>
+
+<body>
+    <section>
+        <center>
+            <h1>Assignment1.Write a program for</h1>
+            <h2>Simple calculator</h2>
+            <table>
+                <tr>
+                    <td colspan="3"><input type="text" id="result"></td>
+                    <td> <input type="button" value="c" onclick="clr()"></td>
+                </tr>
+
+
+                <tr>
+                    <td><input type="button" value="1" onclick="view('1')"></td>
+                    <td><input type="button" value="2" onclick="view('2')"></td>
+                    <td><input type="button" value="3" onclick="view('3')"></td>
+                    <td><input type="button" value="/" onclick="view('/')"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="4" onclick="view('4')"></td>
+                    <td><input type="button" value="5" onclick="view('5')"></td>
+                    <td><input type="button" value="6" onclick="view('6')"></td>
+                    <td><input type="button" value="-" onclick="view('-')"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="7" onclick="view('7')"></td>
+                    <td><input type="button" value="8" onclick="view('8')"></td>
+                    <td><input type="button" value="9" onclick="view('9')"></td>
+                    <td><input type="button" value="+" onclick="view('+')"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="." onclick="view('.')"></td>
+                    <td><input type="button" value="0" onclick="view('0')"></td>
+                    <td><input type="button" value="=" onclick="compute()"></td>
+                    <td><input type="button" value="*" onclick="view('*')"></td>
+                </tr>
+
+            </table>
+        </center>
+    </section>
+    <br><br><br><br><br>
+    <section>
+        <center>
+            <h2>Assignment2>Write a program for calculating Area of shapes</h2>
+            <form action="javascript:calculateArea()" onchange="javascript:updateform()">
+                <label for="id_shapes">Select the shapes</label>
+                <select id="id_shapes">
+                    <option value="circle" selected>Circle</option>
+                    <option value="triangle">Triangle</option>
+                    <option value="square">Square</option>
+                    <option value="rectangle">Rectangle</option>
+                </select>
+                <br> <br>
+
+                <div id="id_inputs_circle">
+                    <label for="id_radius">Radius</label>
+                    <input id="id_radius" type="number" min="0" step="any">
+                    <!-- //min 0 means at least user need to enter 0 or more than 0.step="any" means there can  be any decimal difference between the number. If we do not add step the default difference will be 1 and user will not able to add decimal number   -->
+                    <h2>A = &pi;r <sup>2</sup></h2>
+                </div>
+                <div id="id_inputs_triangle" hidden>
+                    <!-- hidden will hide the content of the div -->
+                    <label for="id_base">Base</label>
+                    <input id="id_base" type="number" min="0" step="any">
+                    <label for="id_height">Height</label>
+                    <input id="id_height" type="number" min="0" step="any">
+                    <h2> <sup>A=b*h</sup> &frasl;<sub>2</sub></h2>
+                </div>
+                <div id="id_inputs_square" hidden>
+                    <label for="id_side">Length</label>
+                    <input id="id_side" type="number" min="0" step="any">
+                    <h2>A= L <sup>2</sup></h2>
+                </div>
+                <div id="id_inputs_rectangle" hidden>
+                    <label for="id_length">Length</label>
+                    <input id="id_length" type="number" min="0" step="any">
+                    <label for="id_width">Width</label>
+                    <input id="id_width" type="number" min="0" step="any">
+                    <h2>A = l*w</h2>
+                </div>
+
+                <input type="submit" value="Calculate Area">
+                <p id="id_output"></p>
+            </form>
+        </center>
+    </section>
+    <section>
+        <center>
+          <h2>Assignment3. WAP for converting temperature fahrenheit to celsius and kelvin</h2>
+          <form action="javascript:changeToCelsius()">
+            <div>
+              <input id="farenheight" type="number" placeholder="Enter the farenheit Degree"> <br><br>
+              <select id="change">
+                <option value="celcius" selected> Celcius</option>
+                <option value="kelvin"> Kelvin</option>
+              </select><br><br>
+            </div>
+            <button>Change</button>
+            <p id="output"></p>
+          </form>
+        </center>
+      </section>
+
+      <section>
+       <center>
+        <label for="leapYear">Enter the year</label><br>
+        <input id="leapYear" type="number"><br>
+        <button onclick="checkLeapYear()">Click me</button>
+        <p id="leapOutput"></p>
+       </center>
+      </section>
+      
+     
+</body>
+
+</html>
